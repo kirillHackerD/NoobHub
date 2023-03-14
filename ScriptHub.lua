@@ -62,6 +62,11 @@ Section:NewSlider("Speed", "", 500, 0, function(s) -- 500 (Макс. значе�
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
+Section:NewButton("ResetSpeed", "", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15
+end)
+
+
 
 
 local Tab = Window:NewTab("Info")
