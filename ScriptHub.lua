@@ -79,8 +79,8 @@ local Tab = Window:NewTab("FullBridge")
 local Section = Tab:NewSection("FullBridge")
 
 Section:NewButton("On", "ButtonInfo", function()
-  if state then
-        local Light = game:GetService("Lighting")
+
+  local Light = game:GetService("Lighting")
  
 function dofullbright()
 Light.Ambient = Color3.new(1, 1, 1)
