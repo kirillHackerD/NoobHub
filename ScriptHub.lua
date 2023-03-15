@@ -78,8 +78,8 @@ local Tab = Window:NewTab("FullBridge")
 -- Подсекция
 local Section = Tab:NewSection("FullBridge")
 
-Section:NewToggle("FullBridge", "", function(state)
-    if state then
+Section:NewButton("On", "ButtonInfo", function()
+  if state then
         local Light = game:GetService("Lighting")
  
 function dofullbright()
@@ -91,9 +91,9 @@ end
 dofullbright()
  
 Light.LightingChanged:Connect(dofullbright)
- else
-  print("Toggle Off")
 end)
+  
+
 
 
 
