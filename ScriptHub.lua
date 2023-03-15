@@ -93,10 +93,10 @@ dofullbright()
 Light.LightingChanged:Connect(dofullbright)
 end)
 
-
 local Tab = Window:NewTab("Esp")
-
- local Section = Tab:NewSection("Esp")
+-- Подсекция
+local Section = Tab:NewSection("Esp")
+	
 	
 	Section:NewButton("Esp", "ButtonInfo", function()
 while wait(0.5) do
