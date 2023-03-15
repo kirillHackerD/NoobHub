@@ -45,7 +45,7 @@ local Section = Tab:NewSection("Cheat")
 
 
 Section:NewButton("popdoors", "ButtonInfo", function()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))()
+
 end)
 
 -- Переключатель
