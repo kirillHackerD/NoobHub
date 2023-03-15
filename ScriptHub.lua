@@ -78,9 +78,9 @@ local Tab = Window:NewTab("FullBridge")
 -- Подсекция
 local Section = Tab:NewSection("FullBridge")
 
-
-Section:NewButton("FullBridge", "ButtonInfo", function()
-local Light = game:GetService("Lighting")
+Section:NewToggle("FullBridge", "", function(state)
+    if state then
+        local Light = game:GetService("Lighting")
  
 function dofullbright()
 Light.Ambient = Color3.new(1, 1, 1)
@@ -93,16 +93,32 @@ dofullbright()
 Light.LightingChanged:Connect(dofullbright)
 end)
 
-Section:NewButton("Off", "ButtonInfo", function()
-local Light = game:GetService("Lighting")
- 
-function dofullbright()
-Light.Ambient = Color1.new(0, 1, 0)
-Light.ColorShift_Bottom = Color1.new(0, 1, 0)
-Light.ColorShift_Top = Color1.new(0, 1, 0)
+
+local Tab = Window:NewTab("Esp")
+
+ local Section = Tab:NewSection("Esp")
+	
+	Section:NewButton("Esp", "ButtonInfo", function()
+while wait(0.5) do
+    for i, childrik in ipairs(workspace:GetDescendants()) do
+        if childrik:FindFirstChild("Humanoid") then
+            if not childrik:FindFirstChild("EspBox") then
+                if childrik ~= game.Players.LocalPlayer.Character then
+                    local esp = Instance.new("BoxHandleAdornment",childrik)
+                    esp.Adornee = childrik
+                    esp.ZIndex = 0
+                    esp.Size = Vector3.new(4, 5, 1)
+                    esp.Transparency = 0.65
+                    esp.Color3 = Color3.fromRGB(255,48,48)
+                    esp.AlwaysOnTop = true
+                    esp.Name = "EspBox"
+                end
+            end
+        end
+    end
 end
- 
-dofullbright()
- 
-Light.LightingChanged:Connect(dofullbright)
 end)
+
+
+
+
