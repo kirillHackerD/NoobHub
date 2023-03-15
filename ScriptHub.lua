@@ -73,3 +73,36 @@ local Tab = Window:NewTab("Info")
 
  local Section = Tab:NewSection("Coder: Delexer#6599,Owner: Delexer#6599")
 
+
+local Tab = Window:NewTab("FullBridge")
+-- Подсекция
+local Section = Tab:NewSection("FullBridge")
+
+
+Section:NewButton("FullBridge", "ButtonInfo", function()
+local Light = game:GetService("Lighting")
+ 
+function dofullbright()
+Light.Ambient = Color3.new(1, 1, 1)
+Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+Light.ColorShift_Top = Color3.new(1, 1, 1)
+end
+ 
+dofullbright()
+ 
+Light.LightingChanged:Connect(dofullbright)
+end)
+
+Section:NewButton("Off", "ButtonInfo", function()
+local Light = game:GetService("Lighting")
+ 
+function dofullbright()
+Light.Ambient = Color1.new(0, 1, 0)
+Light.ColorShift_Bottom = Color1.new(0, 1, 0)
+Light.ColorShift_Top = Color1.new(0, 1, 0)
+end
+ 
+dofullbright()
+ 
+Light.LightingChanged:Connect(dofullbright)
+end)
