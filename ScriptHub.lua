@@ -91,6 +91,8 @@ end
 dofullbright()
  
 Light.LightingChanged:Connect(dofullbright)
+ else
+  print("Toggle Off")
 end)
 
 
