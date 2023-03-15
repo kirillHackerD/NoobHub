@@ -93,15 +93,6 @@ dofullbright()
 Light.LightingChanged:Connect(dofullbright)
 end)
 
-local Tab = Window:NewTab("Scripts")
--- Подсекция
-local Section = Tab:NewSection("Scripts")
-	
-	
-Section:NewButton("popdoors", "ButtonInfo", function()
-
-end)
-
 
 
 
